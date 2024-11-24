@@ -1,77 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akash Jain - Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- Header Section -->
-  <header>
-    <div class="container">
-      <h1>Akash Jain</h1>
-      <p>Computational Media Student</p>
-    </div>
-  </header>
-
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about" class="container">
-    <h2>About</h2>
-    <p>Hello! I’m Akash Jain, pursuing a degree in Computational Media at Georgia Tech. My work focuses on interactive media, video game design, and predictive data modeling.</p>
-    <p>With experience in Java, Python, Blender, and Unity, I love building immersive digital experiences and solving complex problems through innovative tech solutions.</p>
-    <img src="images/akash-profile.jpg" alt="Akash Jain">
-  </section>
-
-  <!-- Work Section -->
-  <section id="work" class="container">
-    <h2>Work/Projects</h2>
-    <div class="project">
-      <h3>Interactive Game Design</h3>
-      <p>An immersive life-sized game with mechatronics integration.</p>
-      <img src="images/project-1.jpg" alt="Game Design">
-    </div>
-    <div class="project">
-      <h3>3D VR Recreation</h3>
-      <p>A 3D VR recreation of Van Gogh's Starry Night.</p>
-      <img src="images/project-2.jpg" alt="VR Project">
-      <a href="https://eman-3600.github.io/Aframe-Project/" target="_blank">View Project</a>
-    </div>
-  </section>
-
-  <!-- Resume Section -->
-  <section id="resume" class="container">
-    <h2>Resume</h2>
-    <p>Download my full resume <a href="resume/AkashJain-Resume.pdf" download>here</a>.</p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <p>If you'd like to collaborate or have any questions, feel free to reach out!</p>
-    <form action="mailto:akashjain1311@gmail.com" method="post" enctype="text/plain">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Akash Jain</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akash Jain Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Akash Jain</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Akash Jain</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="main.jpg" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Akash Jain</h1>
+        <p class="section__text__p2">Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/akash-jain-687673209/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/bruhsteve'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/IMG_3969.HEIC"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Georgia Institute of Technology</h3>
+              <p>B.S. in Computational Media<br /></p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I’m Akash Jain, a Computational Media student at Georgia Institute of Technology.
+               My expertise lies in programming, interactive media, and full-stack development, 
+               and I’ve worked on exciting projects like the Electronic ARTtrium, where I led the 
+               integration of pose-detection software and mechatronic animations.
+                I’m passionate about creating innovative solutions, whether it’s through predictive 
+                data models or immersive exhibits that blend technology and art. 
+                Beyond academics, I stay engaged through student organizations and volunteering, always looking for ways to make a positive impact.
+            </p>
+          </div>
+        </div>
+      </div>
+ 
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/tropical plants.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Electronic ARTrium</h2>
+            <div class="btn-container">
+  
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://youtu.be/bp4qVBsdD70'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/kanye.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Artist Appreciation Website</h2>
+            <div class="btn-container">
+           
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/starry night.jpg"
+                alt="AFrame Website"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">AFrame Website</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:akashjain1311@gmail.com">akashjain1311@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/akash-jain-687673209/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Akash Jain. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
